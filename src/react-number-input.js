@@ -9,7 +9,7 @@
 //
 
 import assign from 'object-assign'
-import numeral from 'numeral'
+import numeral from 'dsandmark-numeral'
 import {Component, PropTypes, createElement} from 'react'
 
 const DEFAULT_NUMBER_FORMAT = '0,0[.][00]'
@@ -113,7 +113,7 @@ export default class NumberInput extends Component {
 	componentDidMount() {
 		// focused: check if component is focused after mounting and set state
 		this.setState({
-			focused: global.document.activeElement === this.refs.input
+			focused: document && document.activeElement === this.refs.input
 		})
 	}
 
