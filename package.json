@@ -1,7 +1,7 @@
 {
-  "name": "react-number-input",
+  "name": "dsandmark-react-number-input",
   "version": "1.14.7",
-  "description": "HTML input field designed to display formatted currency values",
+  "description": "HTML input field designed to display formatted currency values. Based on hongymagic'input field.",
   "main": "build/react-number-input.js",
   "scripts": {
     "prerelease": "NODE_ENV=production webpack --config webpack.prod.config.js",
@@ -18,18 +18,17 @@
     "input",
     "number"
   ],
-  "author": "hongymagic",
+  "author": "dsandmark",
   "repository": {
     "type": "git",
-    "url": "git@github.com:hongymagic/react-number-input.git"
+    "url": "git@github.com:dsandmark/react-number-input.git"
   },
   "bugs": {
-    "mail": "davidhong.code@gmail.com",
-    "url": "https://github.com/hongymagic/react-number-input/issues"
+    "url": "https://github.com/dsandmark/react-number-input/issues"
   },
   "license": "MIT",
   "dependencies": {
-    "numeral": "^1.5.3",
+    "dsandmark-numeral": "^1.5.3",
     "object-assign": "^4.0.1",
     "react": "^0.14.0"
   },

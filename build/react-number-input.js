@@ -54,7 +54,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {//
+	//
 	// NumberInput formats numbers to comma-separated values after
 	// user loses focus of the input.
 	//
@@ -72,7 +72,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 	
 	exports.isNumber = isNumber;
 	exports.toNumeral = toNumeral;
@@ -89,9 +89,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 	
-	var _numeral = __webpack_require__(2);
+	var _dsandmarkNumeral = __webpack_require__(2);
 	
-	var _numeral2 = _interopRequireDefault(_numeral);
+	var _dsandmarkNumeral2 = _interopRequireDefault(_dsandmarkNumeral);
 	
 	var _react = __webpack_require__(3);
 	
@@ -123,11 +123,11 @@ return /******/ (function(modules) { // webpackBootstrap
 			return null;
 		}
 	
-		var n = (0, _numeral2['default'])(value);
+		var n = (0, _dsandmarkNumeral2['default'])(value);
 	
 		// numeral.js converts empty strings into 0 for no reason, so if given
 		// value was not '0' or 0, treat it as null.
-		if (n.value() === 0 && (value !== 0 && value !== '0')) {
+		if (n.value() === 0 && value !== 0 && value !== '0') {
 			return null;
 		}
 	
@@ -210,7 +210,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			value: function componentDidMount() {
 				// focused: check if component is focused after mounting and set state
 				this.setState({
-					focused: global.document.activeElement === this.refs.input
+					focused: document && document.activeElement === this.refs.input
 				});
 			}
 		}, {
@@ -308,7 +308,6 @@ return /******/ (function(modules) { // webpackBootstrap
 		onBlur: function onBlur() {},
 		onChange: function onChange() {}
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 1 */
@@ -1022,7 +1021,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (hasModule) {
 	        module.exports = numeral;
 	    }
-
+	
 	    /*global define:false */
 	    if (true) {
 	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
